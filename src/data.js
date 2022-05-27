@@ -6,13 +6,11 @@ import { listenToThemeSwitching, darkMode } from './utils/reusables.js';
 const github_user_name = "wlan07";
 const repos = [];
 const skills = [];
-const blogs = [];
 
 
 const loading_spinner = () => document.querySelector(".loading-spinner");
 const osp_items = () => document.querySelector(".osp-items");
 const skills_items = () => document.querySelector(".skills-badges");
-const blogs_items = () => document.querySelector(".blog-items");
 
 
 function update_osp_items() {
@@ -42,22 +40,6 @@ function update_skills_items() {
     skills_items().innerHTML = skills_items_innerHtml;
 }
 
-function update_blogs_items() {
-
-    let blogs_items_innerHtml = "";
-
-    blogs.forEach(element => {
-        blogs_items_innerHtml += `<div class="blog-item">
-
-        <img class="blog-item__header-image" src="${element["cover_image_url"]}" alt="why flutter?">
-        <div class="blog-item__title title ">${element["title"]}</div>
-        <div class="blog-item__subtitle subtitle">${element["subtitle"]}</div>
-        <div class="blog-item__bottom-bar"></div>
-    </div>`;
-    });
-
-    blogs_items().innerHTML = blogs_items_innerHtml;
-}
 
 
 const firebaseConfig = {
@@ -93,19 +75,6 @@ async function getOSP() {
 };
 
 
-async function getBlogs() {
-
-    const blogsCol = collection(db, 'blogs');
-    const blogsSnapshot = await getDocs(blogsCol);
-
-    blogsSnapshot.docs.forEach(doc => {
-        blogs.push(doc.data());
-    });
-
-
-    return;
-
-};
 
 
 
@@ -126,15 +95,13 @@ async function getSkills() {
 
 await Promise.all([
     getOSP(),
-    getSkills(),
-    getBlogs()
+    getSkills()
 ])
 
 
 
 update_osp_items();
 update_skills_items();
-update_blogs_items();
 hideLoadingSpinner();
 
 

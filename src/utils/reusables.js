@@ -18,6 +18,8 @@ export function listenToThemeSwitching(darkCallBack, lightCallBack) {
             lightCallBack();
             console.log("ENABLE DARK MODE");
         }
+
+
     });
 
 }

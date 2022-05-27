@@ -1,5 +1,4 @@
 import { listenToThemeSwitching, darkMode } from './utils/reusables.js';
-import { animateProgressBar } from './progress_bar.js';
 
 
 
@@ -22,9 +21,6 @@ const disableDarkMode = () => {
 
 
 
-
-
-
 function changeHeaderBarColor(dark) {
     document.getElementsByTagName('meta')["theme-color"].content = dark ? dark_bg_color : light_bg_color;
     document.getElementsByTagName('meta')["msapplication-navbutton-color"].content = dark ? dark_bg_color : light_bg_color;
@@ -40,26 +36,5 @@ listenToThemeSwitching(disableDarkMode, enableDarkMode);
 if (darkMode() == 'enabled') {
     enableDarkMode();
 }
-
-
-
-fetch(`./pages/me.txt`)
-    .then(response => response.text())
-    .then(text => document.getElementById("content").innerHTML = text)
-
-
-//LISTEN TO NAV BAR ITEMS CLICK EVENT
-Array.from(document.getElementsByClassName('nav-bar-item')).forEach((element) => {
-    element.addEventListener('click', () => {
-        fetch(`./pages/${element.textContent.replace("#", "")}.txt`)
-            .then(response => response.text())
-            .then(text => {
-                document.getElementById("content").innerHTML = text;
-                animateProgressBar();
-            });
-            return true;
-    })
-});
-
 
 
