@@ -4,16 +4,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 * {
-
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* border: 2px solid red; */
 }
 
 
+
+
+
 :root {
-    --background-color: whitesmoke;
+    color-scheme: dark;
+    --accent-color: #4C71F2;
+    --background-color: #f5f5f5;
     --header-color: #000000;
     --paragraph-color: #292020;
     --scroll-bar-height: 4px;
@@ -26,9 +30,36 @@
     --header-color: white;
     --paragraph-color: white;
     --shadow-color: white;
+    --accent-color: #79FF97;
 }
 
 
+/* social media accounts */
+
+
+.sm_accounts {
+
+    display: flex;
+    align-items: center;
+
+}
+
+.sm_accounts a svg {
+
+    height: 25px;
+    width: 25px;
+    margin: 0 0.5rem;
+    display: block;
+    color: var(--header-color);
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+
+}
+
+
+.sm_accounts a svg:hover {
+    transform: scale(1.2);
+}
 
 
 body {
@@ -55,47 +86,31 @@ body {
     height: 25px;
 }
 
-@media only screen and (min-width: 1080px) {
-    #container {
-        width: 90%;
-        margin: 0 auto;
-    }
-}
+
 
 .profile-details-card {
     display: flex;
 }
 
-@media only screen and (max-width: 375px) {
-    .profile-details-card {
 
-        display: inline-block;
-        text-align: center;
-
-
-    }
+.profile-details-badges {
+    margin-top: 1rem;
 }
 
-
-
-
 #container {
-
     height: 100vh;
     width: 100%;
     background-color: var(--background-color);
     max-width: 1080px;
+    margin-inline: auto;
     box-shadow: 0px 2px 2px var(--shadow-color);
-    min-width: 500px;
 }
 
 
 #content {
-
     overflow-y: scroll;
     height: 90%;
     padding: 1rem;
-
 }
 
 
@@ -182,6 +197,14 @@ body {
 }
 
 
+.hp1 {
+    padding: 0 1rem;
+}
+
+.vp1 {
+    padding: 1rem 0;
+}
+
 .paragraph {
     font-family: 'Montserrat';
     font-style: normal;
@@ -201,13 +224,23 @@ body {
 
 }
 
+.osp-items img {
+    margin: 0.05rem 0.1rem;
 
-
-
+}
 
 .osp-section a {
     margin: 0.1rem;
 }
+
+
+
+
+
+
+
+
+
 
 
 .skills-badges {
@@ -242,27 +275,12 @@ body {
     border-radius: 5px;
     box-shadow: 0px 1px 4px var(--shadow-color);
     width: 40%;
-    margin: 0.5rem 0.2rem;
+    margin: 0.5rem 0.4rem;
     overflow: hidden;
 
-
 }
 
-@media only screen and (max-width: 850px) {
-    .blog-item {
 
-        width: 80%;
-        margin: 0.5rem auto;
-
-    }
-
-    .blog-items {
-
-        display: inline-block;
-        text-align: center;
-
-    }
-}
 
 
 .blog-item__header-image {
@@ -330,6 +348,7 @@ body {
     height: var(--scroll-bar-height);
     max-width: 100%;
     background: linear-gradient(to right, #008aff, #00ffef);
+    /* background: linear-gradient(to right, #00AB08, #B7FFBF); */
     transition: width 0.2s ease-out;
 
 }
@@ -353,6 +372,9 @@ body {
 
 .nav-bar-item {
 
+
+    background-color: transparent;
+    border: none;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -366,7 +388,7 @@ body {
 
 .nav-bar-item:hover {
 
-    color: #008aff;
+    color: var(--accent-color);
 
 
 }
@@ -394,13 +416,108 @@ body {
 
 }
 
-@media only screen and (max-width: 900px) {
 
+
+
+/* contact me styling  */
+
+
+.contact-me-section {
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.built-with-love {
+
+
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+
+}
+
+
+
+/* MEDIA QUERIES */
+
+
+
+/* WHEN SCREEN GET SMALLER THAN 700PX */
+
+@media only screen and (max-width: 700px) and (min-width: 470px) {
+
+    .blog-item {
+
+        width: 80%;
+        margin: 0.5rem auto;
+
+    }
+
+    .blog-items {
+
+        display: inline-block;
+        text-align: center;
+
+    }
+
+
+
+
+
+}
+
+/* WHEN SCREEN GET SMALLER THAN 470PX */
+
+@media only screen and (max-width: 470px) {
+    .profile-details-card {
+
+        display: inline-block;
+        text-align: center;
+
+
+    }
+
+    .osp-items img {
+        width: 90vw;
+    }
+
+    .blog-item {
+
+        width: 100%;
+        margin: 0.5rem auto;
+
+    }
+
+    .blog-items {
+
+        display: inline-block;
+        text-align: center;
+
+    }
+
+}
+
+
+
+/* WHEN SCREEN GET SMALLER THAN 870PX */
+
+
+@media only screen and (max-width: 850px) {
 
     .checkbtn {
         display: block;
     }
 
+    .sm_accounts {
+        align-items: center;
+        justify-content: center;
+    }
 
     .dark-mode-toggle {
         margin-right: 4rem;
@@ -430,28 +547,108 @@ body {
     #check:checked~.checkbtn i::before {
         content: "\f00d";
     }
-}
 
 
 
-/* contact me styling  */
-
-
-.contact-me-section {
-
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 
 
 
-.built-with-love {
 
-    margin-top: 3rem;
-    margin-bottom: 1rem;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* LOADING SPINNER */
+
+
+.loading-spinner {
+
+    background-color: var(--background-color);
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    transition: all .5s;
+
+}
+
+.loading-spinner div {
+
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: absolute;
+    border: 1px solid red;
+    animation: up 1s;
+    animation-iteration-count: infinite;
+    transition: 2s;
+    border-bottom: none;
+    border-right: none;
+    animation-timing-function: linear;
+    margin-left: -70px;
+    margin-top: -70px;
+    left: 50%;
+    top: 50%;
+
+}
+
+@keyframes up {
+    from {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#loading-spinner_item2 {
+    width: 90px;
+    height: 90px;
+    left: 50.35%;
+    top: 50.7%;
+    animation-delay: .2s;
+
+}
+
+#loading-spinner_item3 {
+    width: 80px;
+    height: 80px;
+    left: 50.70%;
+    top: 51.4%;
+    animation-delay: .4s;
+}
+
+#loading-spinner_item4 {
+    width: 70px;
+    height: 70px;
+    left: 51.05%;
+    top: 52.1%;
+    animation-delay: .6s;
+
+}
+
+#loading-spinner_item5 {
+    width: 60px;
+    height: 60px;
+    left: 51.40%;
+    top: 52.8%;
+    animation-delay: .8s;
 }

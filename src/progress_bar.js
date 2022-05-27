@@ -2,7 +2,7 @@ const progressBar = document.querySelector("#progress-bar");
 const content = document.querySelector("#content")
 
 
-const animateProgressBar = () => {
+export const animateProgressBar = () => {
 
     let scrollDistance = content.scrollTop;
     let progressWidth = (scrollDistance / (content.scrollHeight - content.clientHeight)) * 100;
