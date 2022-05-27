@@ -252,14 +252,7 @@ body {
 
 }
 
-.blog-items {
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-
-}
 
 .skills-badges img {
 
@@ -270,50 +263,17 @@ body {
 
 
 
-.blog-item {
-
-    border-radius: 5px;
-    box-shadow: 0px 1px 4px var(--shadow-color);
-    width: 40%;
-    margin: 0.5rem 0.4rem;
-    overflow: hidden;
-
-}
 
 
 
 
-.blog-item__header-image {
-
-    width: 100%;
-    background-size: cover;
-
-}
-
-.blog-item__title {
 
 
-    padding: 0.5rem;
-    font-size: 20px;
-    line-height: 25px;
-    text-align: start;
-
-}
 
 
-.blog-item__bottom-bar {
 
 
-    height: 70px;
 
-
-}
-
-
-.blog-item__subtitle {
-    padding: 0 0.5rem;
-    text-align: start;
-}
 
 
 
@@ -448,29 +408,7 @@ body {
 
 
 
-/* WHEN SCREEN GET SMALLER THAN 700PX */
 
-@media only screen and (max-width: 700px) and (min-width: 470px) {
-
-    .blog-item {
-
-        width: 80%;
-        margin: 0.5rem auto;
-
-    }
-
-    .blog-items {
-
-        display: inline-block;
-        text-align: center;
-
-    }
-
-
-
-
-
-}
 
 /* WHEN SCREEN GET SMALLER THAN 470PX */
 
@@ -487,19 +425,7 @@ body {
         width: 90vw;
     }
 
-    .blog-item {
-
-        width: 100%;
-        margin: 0.5rem auto;
-
-    }
-
-    .blog-items {
-
-        display: inline-block;
-        text-align: center;
-
-    }
+    
 
 }
 
