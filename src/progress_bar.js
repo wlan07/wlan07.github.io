@@ -7,6 +7,9 @@ export const animateProgressBar = () => {
     let scrollDistance = content.scrollTop;
     let progressWidth = (scrollDistance / (content.scrollHeight - content.clientHeight)) * 100;
 
+
+
+
     let value = Math.floor(progressWidth);
 
 

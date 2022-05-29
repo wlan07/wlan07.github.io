@@ -7,23 +7,33 @@ const github_user_name = "wlan07";
 const repos = [];
 const skills = [];
 
+let showMore = false;
 
 const loading_spinner = () => document.querySelector(".loading-spinner");
 const osp_items = () => document.querySelector(".osp-items");
 const skills_items = () => document.querySelector(".skills-badges");
 
 
-function update_osp_items() {
 
+function update_osp_items() {
 
     let osp_items_innerHtml = "";
 
-    repos.forEach(element => {
-        osp_items_innerHtml += `<a href='https://github.com/wlan07/${element}'><img \
-    src='https://github-readme-stats.vercel.app/api/pin/?username=${github_user_name}&repo=${element}&theme=${darkMode() == 'enabled' ? 'dark' : 'light'}'></a>`;
-    });
-
+    for (let i = 0; i < repos.length; i++) {
+        if (showMore) {
+            osp_items_innerHtml += `<a href='https://github.com/wlan07/${repos[i]}'><img  \
+            src='https://github-readme-stats.vercel.app/api/pin/?username=${github_user_name}&repo=${repos[i]}&theme=${darkMode() == 'enabled' ? 'dark' : 'light'}'></a>`;
+        } else {
+            if (i < 6) {
+                osp_items_innerHtml += `<a href='https://github.com/wlan07/${repos[i]}'><img  \
+                src='https://github-readme-stats.vercel.app/api/pin/?username=${github_user_name}&repo=${repos[i]}&theme=${darkMode() == 'enabled' ? 'dark' : 'light'}'></a>`;
+            } else {
+                break;
+            }
+        }
+    }
     osp_items().innerHTML = osp_items_innerHtml;
+
 }
 
 
@@ -40,6 +50,16 @@ function update_skills_items() {
     skills_items().innerHTML = skills_items_innerHtml;
 }
 
+
+function listenToShowMoreClick() {
+    document.getElementById('showMore').onclick = () => {
+
+        showMore = !showMore;
+        event.target.textContent = showMore ? "See Less" : "See More";
+        document.activeElement.blur();
+        update_osp_items();
+    }
+}
 
 
 const firebaseConfig = {
@@ -62,20 +82,23 @@ function hideLoadingSpinner() {
 
 async function getOSP() {
 
-    const ospCol = collection(db, 'osp');
-    const ospSnapshot = await getDocs(ospCol);
 
-    ospSnapshot.docs.forEach(doc => {
-        repos.push(doc.data()["github_repo_link"]);
-    });
+    await fetch(`https://api.github.com/users/${github_user_name}/repos`)
+        .then(response => response.json())
+        .then(data => {
+            data.filter((element, index) => {
+                return !element["fork"] && element["stargazers_count"] > 0
+            }).sort((a, b) => b["stargazers_count"] - a["stargazers_count"]).forEach(repo => {
+                repos.push(repo["name"]);
+            });
+        })
+        .catch(error => console.error(error));
+
 
 
     return;
 
 };
-
-
-
 
 
 
@@ -95,14 +118,20 @@ async function getSkills() {
 
 await Promise.all([
     getOSP(),
-    getSkills()
-])
+    getSkills(),
+]);
+
+
+
+
 
 
 
 update_osp_items();
 update_skills_items();
 hideLoadingSpinner();
+
+listenToShowMoreClick();
 
 
 listenToThemeSwitching(update_osp_items, update_osp_items);

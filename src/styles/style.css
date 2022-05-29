@@ -82,6 +82,9 @@ body {
     height: 25px;
 }
 
+.dark-mode-toggle:hover {
+    color: var(--accent-color);
+}
 
 
 .profile-details-card {
@@ -220,30 +223,21 @@ body {
 
 }
 
-.osp-items img {
+.osp-items a img {
     margin: 0.05rem 0.1rem;
-
 }
 
 .osp-section a {
     margin: 0.1rem;
+    /* opacity: 1;
+    transition: 2ms ease-in; */
 }
-
-
-
-
-
-
-
-
-
 
 
 .skills-badges {
 
     display: flex;
     flex-wrap: wrap;
-
     justify-content: center;
 
 }
@@ -256,19 +250,6 @@ body {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -458,4 +439,49 @@ body {
     left: 51.40%;
     top: 52.8%;
     animation-delay: .8s;
+}
+
+
+/* SHOW MORE BUTTON */
+
+.button-55 {
+    margin-bottom: 2.5rem;
+    align-self: center;
+    background-color: var(--background-color);
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color: var(--header-color);
+    cursor: pointer;
+    display: inline-block;
+    font-family: Neucha, sans-serif;
+    font-size: 1rem;
+    line-height: 23px;
+    outline: none;
+    padding: .75rem;
+    width: 150px;
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-55:hover {
+    box-shadow: var(--shadow-color) 2px 8px 8px -5px;
+    transform: translate3d(0, 2px, 0);
+}
+
+.button-55:focus {
+    box-shadow: var(--shadow-color) 2px 8px 4px -6px;
 }
