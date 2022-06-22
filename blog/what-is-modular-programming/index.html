@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#f5f5f5">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#f5f5f5">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#f5f5f5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../src/styles/blog.css">
+    <title>What is modular programming ? </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <base target="_blank">
+
+
+<body>
+
+
+    <div id="container">
+
+        <!-- top bar section  -->
+        <div class="top-bar p1">
+
+            <a target="_self" href="../../">
+                <p>
+
+                    &lt;wlan07/&gt;
+
+                </p>
+            </a>
+
+
+
+
+            <button id="dark-mode-toggle" class="dark-mode-toggle">
+                <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496">
+                    <path fill="currentColor"
+                        d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z"
+                        transform="translate(-8 -8)" />
+                </svg>
+            </button>
+
+
+            <div id="scroll-path"> </div>
+            <div id="progress-bar"> </div>
+
+
+        </div>
+
+
+
+        <div id="content">
+
+
+            <img class="blog-cover-image" src="assets/modular_programming.png" alt="modular_programming">
+            <br>
+            <br>
+            <!-- # What is modular programming? -->
+            <div class="header p1"> # What is modular programming?</div>
+
+            <div class="paragraph hp1">
+                The concept of modular programming is inspired from <span class="link1"><a
+                        href="https://youtu.be/20JP8w6_nVA">modular design</a>
+                </span> and basically is <strong>decomposing complex
+                    & large softwares</strong> into <strong>simples modules</strong> for an easy and faster
+                implementation by allowing parallel
+                developement of different parts of the system .
+
+            </div>
+
+
+            <center> <img class="image" src="assets/i1.jpg" alt="">
+            </center>
+
+            <!-- # What is modularity ? -->
+            <div class="header p1"> # What is modularity ?</div>
+            <div class="paragraph hp1">
+                Modularity refers to the <strong>division of software</strong> into <strong>separate modules</strong>
+                which are <strong>differently named and
+                    addressed</strong> and are integrated later on in order to obtain the completely functional software
+                .
+
+                it allows a program to be intellectually manageable , while single large programs are difficult to
+                understand
+                and read .
+
+            </div>
+
+            <!-- # Properties of a modular system ? -->
+            <div class="header p1"> # Properties of a modular system ?</div>
+
+
+            <ul>
+                <li class="paragraph"> each module is a well defined system that can be used to with other applications
+
+                </li>
+                <li class="paragraph"> each module has a single specific purpose
+                </li>
+                <li class="paragraph"> modules can be separately compiled and stored in a library
+                </li>
+                <li class="paragraph"> modules can use other modules
+                </li>
+
+                <li class="paragraph"> modules should be easier to use than to build
+                </li>
+                <li class="paragraph"> modules are simpler from outside than inside
+                </li>
+            </ul>
+
+
+
+
+
+
+            <div class="callout success paragraph">
+                <b> Modularity </b>
+
+                is all about making blocks, and each block is made with the help of other blocks. Every block in itself
+                is solid and testable and can be stacked together to create an entire application. Therefore, thinking
+                about the concept of modularity is also like building the whole architecture of the application.
+            </div>
+
+
+
+
+
+            <!-- # Advantages of modular programming ? -->
+
+
+            <div class="header p1"> # Advantages of modular programming ?</div>
+            <div class="p-counter">
+                <span></span>
+                <p><strong>Code is easier to read - </strong> Working on modular programming makes code easier to read
+                    because functions
+                    perform different tasks as compared to monolithic codes.
+                </p>
+                <p><strong>Code is easier to test -</strong> In software, some functions perform fewer tasks and also
+                    functions that
+                    perform numerous tasks. If the software is easily split using modules, it becomes easier to test.
+                </p>
+                <p><strong>Reusability -</strong> There are times where a piece of code is implemented everywhere in our
+                    program. Instead
+                    of copying and pasting it, again and again, modularity gives us the advantage of reusability so that
+                    we can pull our code from anywhere using interfaces or libraries. The concept of reusability also
+                    reduces the size of our program.</p>
+                <p><strong>Faster fixes -</strong> Suppose there is an error in the payment options in any application,
+                    and the bug needs to be removed. Modularity can be a great help because we know that there will be a
+                    separate function
+                    that will contain the code of payments, and only that function will only be rectified. Thus using
+                    modules to find and fixing bugs becomes much more smooth and maintainable.</p>
+
+                <p><strong>Easy collaboration -</strong> Different developers work on a single piece of code in the
+                    team. There are chances of conflicts when there's a git merge. This conflict can be reduced if the
+                    code is split between more functions, files, repos, etc. We can also provide ownership to specific
+                    code modules, where a team member can break them down into smaller tasks.</p>
+
+            </div>
+
+            <!-- # Disadvantages of modular programming ? -->
+            <div class="header p1"> # Disadvantages of modular programming ?</div>
+
+
+            <ul>
+                <li class="paragraph"> There is a need for extra time and budget for a product in modular programming
+
+                </li>
+                <li class="paragraph"> It is a challenging task to combine all the modules
+                </li>
+                <li class="paragraph"> Careful documentation is required so that other program modules are not affected
+                </li>
+                <li class="paragraph"> Some modules may partly repeat the task performed by other modules. Hence,
+                    Modular programs need more memory space and extra time for execution
+                </li>
+
+
+                <li class="paragraph"> It reduces the program's efficiency because testing and debugging are
+                    time-consuming, where each function contains a thousand lines of code
+                </li>
+            </ul>
+
+
+            <!-- # IMPORTANT ! -->
+            <div class="header p1"> # IMPORTANT !</div>
+
+
+
+            <div class="paragraph p1">
+                There is some concepts you should know about them like <strong>decoupling</strong> ,
+                <strong>coupling</strong> & <strong>cohesion :</strong>
+            </div>
+
+            <ul>
+                <li class="paragraph"> <strong>Decoupling</strong> means that one module cannot depend on another module
+                    directly
+                </li>
+                <li class="paragraph"> <strong>Coupling</strong> is the act of joining two things together (modules)
+                </li>
+                <li class="paragraph"> <strong>Cohesion</strong> refers to the degree to which the elements inside a
+                    module belong
+                    together</li>
+            </ul>
+
+
+
+
+            <center> <img class="image" src="assets/cohesion-vs-coupling.png" alt="">
+            </center>
+
+            <div class="paragraph p1">
+                The blog gonna end up just right here so you don't get bored and if you want to grasp more about that
+                topic try to
+                learn more about the last 3 concepts that we have talked about briefly .
+            </div>
+
+
+
+            <!-- # References  -->
+            <div class="header p1"> # References</div>
+
+            <div class="reference-box paragraph p1 ">
+
+                <p class="link1"><a
+                        href="https://www.javatpoint.com/what-is-modular-programming">what-is-modular-programming</a>
+                </p>
+                <p class="link1"><a href="https://youtu.be/Mc5J_AV5aNg">Modular Design - Intro to Computer Science</a>
+                </p>
+
+                <p class="link1"><a
+                        href="https://www.geeksforgeeks.org/software-engineering-differences-between-coupling-and-cohesion/">differences
+                        between coupling and cohesion</a>
+                </p>
+                <p class="link1"><a
+                        href="https://medium.com/@cs.hitch.hiker/on-software-decoupling-components-and-making-them-modular-fbe61e487065">decoupling-components-and-making-them-modular</a>
+                </p>
+            </div>
+
+
+
+            <center><img class="built-with-love" src="http://ForTheBadge.com/images/badges/built-with-love.svg"
+                    alt="built-with-love"></center>
+
+        </div>
+
+    </div>
+
+    <script type="module" src="../../src/app.js" type="text/javascript"></script>
+    <script type="module" src="../../src/progress_bar.js" type="text/javascript"></script>
+
+
+</body>
+
+</html>
