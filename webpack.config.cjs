@@ -2,7 +2,7 @@ const path = require('path')
 
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: "./src/data.js",
   output: {
     path: path.join(__dirname, "/src/dist/"),
