@@ -632,6 +632,8 @@ a {
     transform: translate(0, 40px);
 }
 
+
+
 .card-1 .card-img,
 .card-1 .card-img-hovered {
     background-image: var(--card-img-hovered-overlay), url(../../blog/what-is-modular-programming/assets/modular_programming.png);
