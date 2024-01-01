@@ -151,6 +151,11 @@ body {
     -ms-user-select: none;
 }
 
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
 
 
 .title {
@@ -629,23 +634,16 @@ a {
 
 .card-1 .card-img,
 .card-1 .card-img-hovered {
-    background-image: var(--card-img-hovered-overlay), url(https://source.unsplash.com/Qm_n6aoYzDs);
+    background-image: var(--card-img-hovered-overlay), url(../../blog/what-is-modular-programming/assets/modular_programming.png);
 }
 
 .card-2 .card-img,
 .card-2 .card-img-hovered {
-    background-image: var(--card-img-hovered-overlay), url(../../blog/what-is-modular-programming/assets/modular_programming.png);
+    background-image: var(--card-img-hovered-overlay), url(../../blog/unit-testing-flutter/assets/unit_test_flutter_blog_cover.png);
 }
 
-.card-3 .card-img,
-.card-3 .card-img-hovered {
-    background-image: var(--card-img-hovered-overlay), url(https://source.unsplash.com/V0L1LH7qWOQ);
-}
 
-.card-4 .card-img,
-.card-4 .card-img-hovered {
-    background-image: var(--card-img-hovered-overlay), url(https://source.unsplash.com/zAi2Is48-MA);
-}
+
 
 
 .highlight {
