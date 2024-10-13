@@ -841,7 +841,7 @@ a {
 
 
 
-.sexytabs>ul {
+/* .sexytabs>ul {
     text-align: center;
     font-weight: 500;
     margin: 50px 0 0;
@@ -941,7 +941,7 @@ a {
 
 .contents {
     padding: 20px 10px;
-}
+} */
 
 
 /* PROJECTS */
@@ -959,6 +959,7 @@ a {
 .section {
     text-align: center;
 } */
+
 
 
 /** media queries **/
@@ -1035,15 +1036,20 @@ a {
 
 }
 
+
+#experience-timeline {
+    margin: auto;
+}
+
 @media screen and (min-width: 470px) {
 
     /* some additional margin for screens have width>=470px; */
-    .sexytabs {
+    #experience-timeline {
         width: 90%;
     }
 }
 
 
-strong{
+strong {
     font-weight: 400;
 }
