@@ -188,28 +188,28 @@ listenToShowMoreClick();
 
 listenToThemeSwitching(update_osp_items, update_osp_items);
 
-$(document).ready(function () {
-    if (Modernizr.csstransitions && Modernizr.csstransforms) {
-        $(".sexytabs").tabs({
-            show: {
-                effect: "slide",
-                direction: "left",
-                duration: 200,
-                easing: "easeOutBack"
-            },
-            hide: {
-                effect: "slide",
-                direction: "right",
-                duration: 200,
-                easing: "easeInQuad"
-            }
-        });
-    } else {
-        console.warn("CSS transitions and transforms are not supported. Consider updating your browser.");
-        // initialize tabs without the slide effect as a fallback
-        $(".sexytabs").tabs();
-    }
-});
+// $(document).ready(function () {
+//     if (Modernizr.csstransitions && Modernizr.csstransforms) {
+//         $(".sexytabs").tabs({
+//             show: {
+//                 effect: "slide",
+//                 direction: "left",
+//                 duration: 200,
+//                 easing: "easeOutBack"
+//             },
+//             hide: {
+//                 effect: "slide",
+//                 direction: "right",
+//                 duration: 200,
+//                 easing: "easeInQuad"
+//             }
+//         });
+//     } else {
+//         console.warn("CSS transitions and transforms are not supported. Consider updating your browser.");
+//         // initialize tabs without the slide effect as a fallback
+//         $(".sexytabs").tabs();
+//     }
+// });
 
 // function populateTimeline(entries) {
 //     const timelineDiv = document.querySelector('#timeline .timeline-wrapper ul');

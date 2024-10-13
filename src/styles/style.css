@@ -351,15 +351,10 @@ body {
 
 @media only screen and (max-width: 850px) {
 
-
-
     .sm_accounts {
         align-items: center;
         justify-content: center;
     }
-
-
-
 
 }
 
@@ -839,75 +834,7 @@ a {
     margin-top: 5px;
 }
 
-/** media queries **/
-@media (max-width: 991px) {
-    .timeline li .timeline-panel {
-        width: 44%;
-    }
-}
 
-@media (max-width: 700px) {
-    .page-header h1 {
-        font-size: 1.8em;
-    }
-
-    .timeline li.timeline-inverted .timeline-panel {
-        border-right: 1px solid;
-    }
-
-    .timeline li .timeline-panel {
-        border-left: 1px solid;
-    }
-
-    .timeline li .timeline-panel {
-        border-right: 20px solid #ff9800;
-    }
-
-    .timeline li.timeline-inverted .timeline-panel {
-        border-right: 20px solid #43B02A;
-        border-left: 1px solid;
-    }
-
-    ul.timeline:before {
-        left: 40px;
-    }
-
-    ul.timeline li .timeline-panel {
-        width: calc(100% - 90px);
-        width: -moz-calc(100% - 90px);
-        width: -webkit-calc(100% - 90px);
-    }
-
-    ul.timeline li .tl-circ {
-        top: 30px;
-        left: 29.5px;
-        margin-left: 0;
-
-    }
-
-    ul.timeline>li>.tldate {
-        margin: 0;
-    }
-
-    ul.timeline>li>.timeline-panel {
-        float: right;
-        text-align: left;
-    }
-
-    ul.timeline>li>.timeline-panel:before {
-        border-left-width: 0;
-        border-right-width: 15px;
-        left: -15px;
-        right: auto;
-    }
-
-    ul.timeline>li>.timeline-panel:after {
-        border-left-width: 0;
-        border-right-width: 14px;
-        left: -14px;
-        right: auto;
-    }
-}
 
 
 /* TABS  */
@@ -1009,11 +936,114 @@ a {
 }
 
 .sexytabs {
-    width: 90%;
-    min-width: 360px;
     margin: auto;
 }
 
 .contents {
     padding: 20px 10px;
+}
+
+
+/* PROJECTS */
+
+/* .content-slide {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
+
+.content-slide img {
+    width: 70%;
+}
+
+.section {
+    text-align: center;
+} */
+
+
+/** media queries **/
+@media (max-width: 991px) {
+    .timeline li .timeline-panel {
+        width: 44%;
+    }
+}
+
+@media (max-width: 700px) {
+    .page-header h1 {
+        font-size: 1.8em;
+    }
+
+    .timeline li.timeline-inverted .timeline-panel {
+        border-right: 1px solid;
+    }
+
+    .timeline li .timeline-panel {
+        border-left: 1px solid;
+    }
+
+    .timeline li .timeline-panel {
+        border-right: 20px solid #ff9800;
+    }
+
+    .timeline li.timeline-inverted .timeline-panel {
+        border-right: 20px solid #43B02A;
+        border-left: 1px solid;
+    }
+
+    ul.timeline:before {
+        left: 40px;
+    }
+
+    ul.timeline li .timeline-panel {
+        width: calc(100% - 90px);
+        width: -moz-calc(100% - 90px);
+        width: -webkit-calc(100% - 90px);
+    }
+
+    ul.timeline li .tl-circ {
+        top: 30px;
+        left: 29.5px;
+        margin-left: 0;
+
+    }
+
+    ul.timeline>li>.tldate {
+        margin: 0;
+    }
+
+    ul.timeline>li>.timeline-panel {
+        float: right;
+        text-align: left;
+    }
+
+    ul.timeline>li>.timeline-panel:before {
+        border-left-width: 0;
+        border-right-width: 15px;
+        left: -15px;
+        right: auto;
+    }
+
+    ul.timeline>li>.timeline-panel:after {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -14px;
+        right: auto;
+    }
+
+
+
+
+}
+
+@media screen and (min-width: 470px) {
+
+    /* some additional margin for screens have width>=470px; */
+    .sexytabs {
+        width: 90%;
+    }
+}
+
+
+strong{
+    font-weight: 400;
 }
